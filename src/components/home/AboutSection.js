@@ -1,17 +1,18 @@
 'use client';
 
 const AboutSection = () => {
-
   return (
-    <section className="py-16 bg-gray-50 text-black">
+    <section className="py-8 md:py-16 bg-gray-50 text-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          {/* Text Content */}
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        {/* Mobile-first responsive layout */}
+        <div className="flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-8 items-center">
+          
+          {/* Text Content - comes first on mobile, maintains order on desktop */}
+          <div className="w-full lg:w-[40%] order-1 lg:order-1">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6 text-center lg:text-left">
               About Chellamay Baby Shop
             </h2>
-            <div className="space-y-4 text-gray-600">
+            <div className="space-y-3 md:space-y-4 text-gray-600 text-sm sm:text-base">
               <p>
                 Welcome to Chellamay Baby Shop, your trusted destination for all things baby in Tenkasi. 
                 Since our establishment, we have been dedicated to providing the highest quality baby products 
@@ -29,13 +30,14 @@ const AboutSection = () => {
               </p>
             </div>
           </div>
-
-          {/* Image */}
-          <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
-            <div className="absolute inset-0 bg-pink-200">
-              {/* Replace with actual image */}
-              <div className="w-full h-full bg-gradient-to-br from-pink-100 to-blue-100" />
-            </div>
+          
+          {/* Image - comes second on mobile, maintains position on desktop */}
+          <div className="relative h-[200px] sm:h-[250px] md:h-[300px] lg:h-[400px] rounded-lg overflow-hidden shadow-xl w-full lg:w-[60%] order-2 lg:order-2">
+            <img
+              src="/images/chella-logo2.gif"
+              alt="Chellamay Baby Shop Store"
+              className="w-full h-full object-cover bg-gray-50"
+            />
           </div>
         </div>
       </div>

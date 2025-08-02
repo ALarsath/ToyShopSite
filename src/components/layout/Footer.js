@@ -10,10 +10,15 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <address className="not-italic">
+            <address className="not-italic mb-4">
               <p>27, Amman Sannathi St</p>
               <p>Tenkasi, Tamil Nadu 627811</p>
               <p className="mt-2">Phone: <a href="tel:+918883509501" className="hover:text-pink-500">088835 09501</a></p>
+            </address>
+            <h3 className="text-lg font-semibold mb-2">Other Branches</h3>
+             <address className="not-italic">
+              <p>Theppakulam, Tenkasi</p>
+              <p>Pavoorchatram</p>
             </address>
           </div>
 

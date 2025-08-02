@@ -6,6 +6,7 @@ export default function AboutPage() {
     <Layout>
       <div className="pt-16 pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header section - already responsive */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               About Chellamay Baby Shop
@@ -15,31 +16,44 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-            <div className="space-y-6 text-gray-600">
-              <p>
-                Welcome to Chellamay Baby Shop, where we understand that every child is unique and special. 
-                Our journey began with a simple mission: to provide parents with high-quality, safe, and 
-                affordable baby products that contribute to their children's growth and development.
-              </p>
-              <p>
-                We take pride in offering a carefully curated selection of products, from educational toys 
-                and safety gear to comfortable clothing and essential accessories. Our experienced team is 
-                always ready to help you find the perfect items for your little ones.
-              </p>
-              <p>
-                At Chellamay Baby Shop, we believe in building lasting relationships with our customers. 
-                Your trust and satisfaction are our top priorities, and we strive to maintain the highest 
-                standards in everything we do.
-              </p>
+          {/* Main content section - now fully responsive */}
+          <div className="flex flex-col lg:flex-row lg:justify-between gap-8 lg:items-center mb-16">
+            {/* Text Content - stacks on top for mobile, left side for desktop */}
+            <div className="w-full lg:w-[40%]">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+                WE ARE THE BEST CHOICE FOR YOUR BABY
+              </h2>
+              <div className="space-y-4 text-gray-600 text-base md:text-lg">
+                <p>
+                  Welcome to Chellamay Baby Shop, your trusted destination for all things baby in Tenkasi. 
+                  Since our establishment, we have been dedicated to providing the highest quality baby products 
+                  to our valued customers.
+                </p>
+                <p>
+                  Our carefully curated selection includes everything from educational toys and safety gear 
+                  to comfortable clothing and essential accessories. We understand that every child is unique, 
+                  which is why we offer a diverse range of products to suit different needs and preferences.
+                </p>
+                <p>
+                  At Chellamay Baby Shop, we prioritize safety, quality, and customer satisfaction. Our team 
+                  is committed to helping you find the perfect products for your little ones, making your 
+                  shopping experience both enjoyable and rewarding.
+                </p>
+              </div>
             </div>
 
-            <div className="relative h-[400px] rounded-lg overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-pink-100 to-blue-100" />
+            {/* Image - stacks below text on mobile, right side on desktop */}
+            <div className="relative h-[250px] sm:h-[300px] lg:h-[400px] rounded-lg overflow-hidden shadow-xl w-full lg:w-[60%]">
+              <img
+                src="/images/chella-logo2.gif"
+                alt="Chellamay Baby Shop Store"
+                className="w-full h-full object-cover bg-gray-50"
+              />
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {/* Mission, Vision, Values grid - responsive grid that adapts to screen size */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {[
               {
                 title: 'Our Mission',
@@ -56,10 +70,14 @@ export default function AboutPage() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="bg-white p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{item.title}</h3>
-                <p className="text-gray-600">{item.content}</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                  {item.content}
+                </p>
               </div>
             ))}
           </div>

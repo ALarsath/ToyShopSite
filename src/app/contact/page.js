@@ -29,26 +29,18 @@ export default function ContactPage() {
       <div className="pt-16 pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-12"
-          >
+          <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Contact Us
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We'd love to hear from you. Get in touch with us!
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
-            >
+            <div>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700">
@@ -117,15 +109,10 @@ export default function ContactPage() {
                   Send Message
                 </button>
               </form>
-            </motion.div>
+            </div>
 
             {/* Contact Information */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
-              className="space-y-8"
-            >
+            <div className="space-y-8">
               {/* Address */}
               <div className="flex items-start space-x-4">
                 <FaMapMarkerAlt className="text-2xl text-pink-500 mt-1" />
@@ -184,7 +171,7 @@ export default function ContactPage() {
                   referrerPolicy="no-referrer-when-downgrade"
                 />
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>

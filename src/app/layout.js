@@ -18,19 +18,30 @@ const nunito = Nunito({
   display: 'swap',
 });
 
+import './globals.css'
+import { Inter, Montserrat } from 'next/font/google'
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-montserrat',
+})
+
 export const metadata = {
   title: 'Chellamay Baby Shop',
-  description: 'Your One-Stop Shop for Quality Baby Products in Tenkasi',
-};
+  description: 'Your Trusted Destination for Quality Baby Products in Tenkasi',
+}
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${poppins.variable} ${nunito.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="en" className={`${inter.variable} ${montserrat.variable}`}>
+      <body className="font-inter">{children}</body>
     </html>
-  );
+  )
 }
