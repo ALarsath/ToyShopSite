@@ -44,4 +44,5 @@ export default function RootLayout({ children }) {
       <body className="font-inter">{children}</body>
     </html>
   )
-}
+} 
+ 
