@@ -1,4 +1,4 @@
-'use client';
+
 
 import { Poppins, Nunito } from 'next/font/google';
 import './globals.css';
