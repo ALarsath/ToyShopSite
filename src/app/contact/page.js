@@ -12,10 +12,16 @@ export default function ContactPage() {
   });
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add form submission logic here
-    console.log(formData);
-  };
+  e.preventDefault();
+
+  const { name, email, phone, message } = formData;
+
+  const text = `Hi Chellamay Baby Shop 👶✨,%0A%0A📍 Name: ${name}%0A📧 Email: ${email}%0A📞 Phone: ${phone}%0A💬 Message: ${message}`;
+
+  const whatsappURL = `https://wa.me/918883509501?text=${encodeURIComponent(text)}`;
+
+  window.open(whatsappURL, '_blank');
+};
 
   const handleChange = (e) => {
     setFormData({

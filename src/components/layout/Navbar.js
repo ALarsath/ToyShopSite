@@ -34,21 +34,31 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           
          {/* Logo and Title */}
-<Link href="/" className="group flex items-center space-x-2">
-  <div className="w-16 h-16 relative">
-    <Image
-      src="/images/chella-trns-logo.png"
-      alt="Chellamay Logo"
-      width={64}
-      height={64}
-      className="object-contain"
-      priority
-    />
-  </div>
-  <span className="text-sm md:text-lg font-bold font-sans text-gray-600 hover:text-gray-700 transition-all duration-300">
-    
-  </span>
-</Link>
+            <Link href="/" className="group flex items-center ">
+            {/* Main Logo */}
+            <div className="w-16 h-16 relative">
+                <Image
+                src="/images/chella-trns-logo.png"
+                alt="Chellamay Logo"
+                width={64}
+                height={64}
+                className="object-contain"
+                priority
+                />
+            </div>
+
+            {/* Wordmark Logo (Text Logo) */}
+            <div className="h-12 relative">
+                <Image
+                src="/images/chella-word.png" // Replace with your own path
+                alt="Chellamay Text Logo"
+                width={180} // or 200
+                height={45} // or 50
+                className="object-contain"
+                priority
+                />
+            </div>
+            </Link>
 
           {/* Desktop Menu with playful hover effects */}
           <div className="hidden lg:flex items-center space-x-2">
