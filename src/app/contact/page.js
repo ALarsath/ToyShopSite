@@ -22,7 +22,7 @@ export default function ContactPage() {
 
   window.open(whatsappURL, '_blank');
 };
-
+ 
   const handleChange = (e) => {
     setFormData({
       ...formData,
