@@ -50,7 +50,7 @@ const Navbar = () => {
             {/* Wordmark Logo (Text Logo) */}
             <div className="h-12 relative">
                 <Image
-                src="/images/chella-word.png" // Replace with your own path
+                src="/images/titlelogo.png" // Replace with your own path
                 alt="Chellamay Text Logo"
                 width={180} // or 200
                 height={45} // or 50
